@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>5.0</version>
+    <date>2021-09-03T06:49:39Z</date>
+    <groups>
+        <group>
+            <name>Templates/Printer</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>HP ColorLaserJet FlowMFP M776</template>
+            <name>HP ColorLaserJet FlowMFP M776</name>
+            <groups>
+                <group>
+                    <name>Templates/Printer</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Printer</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>Серийный номер</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>iso.3.6.1.2.1.43.5.1.1.17.1</snmp_oid>
+                    <key>mib-2.43.5.1.1.17.1</key>
+                    <delay>1m</delay>
+                    <history>365d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>Printer</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Всего напечатано страниц</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>iso.3.6.1.2.1.43.10.2.1.4.1.1</snmp_oid>
+                    <key>mib-2.43.10.2.1.4.1.1</key>
+                    <delay>1m</delay>
+                    <history>100d</history>
+                    <applications>
+                        <application>
+                            <name>Printer</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Модель черного картриджа</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>iso.3.6.1.2.1.43.11.1.1.6.1.1</snmp_oid>
+                    <key>Black_Cartridge</key>
+                    <delay>1m</delay>
+                    <history>365d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>Printer</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Уровень тонера черного картриджа</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>iso.3.6.1.2.1.43.11.1.1.9.1.1</snmp_oid>
+                    <key>Black_Cartridge_Level</key>
+                    <delay>1m</delay>
+                    <history>90d</history>
+                    <units>%</units>
+                    <applications>
+                        <application>
+                            <name>Printer</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last(#1)}&lt;10</expression>
+                            <name>Уровень тонера черного картриджа меньше 10% на {HOST.NAME}</name>
+                            <priority>WARNING</priority>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Модель голубого картриджа</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>iso.3.6.1.2.1.43.11.1.1.6.1.2</snmp_oid>
+                    <key>Cyan_Cartridge</key>
+                    <delay>1m</delay>
+                    <history>365d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>Printer</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Уровень тонера голубого картриджа</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>iso.3.6.1.2.1.43.11.1.1.9.1.2</snmp_oid>
+                    <key>Cyan_Cartridge_Level</key>
+                    <delay>1m</delay>
+                    <history>30d</history>
+                    <units>%</units>
+                    <applications>
+                        <application>
+                            <name>Printer</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last(#1)}&lt;10</expression>
+                            <name>Уровень тонера голубого картриджа меньше 10% на {HOST.NAME}</name>
+                            <priority>WARNING</priority>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Модель пурпурного картриджа</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>iso.3.6.1.2.1.43.11.1.1.6.1.3</snmp_oid>
+                    <key>Magenta_Cartridge</key>
+                    <delay>1m</delay>
+                    <history>365d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>Printer</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Уровень тонера пурпурного картриджа</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>iso.3.6.1.2.1.43.11.1.1.9.1.3</snmp_oid>
+                    <key>Magenta_Cartridge_Level</key>
+                    <delay>1m</delay>
+                    <history>30d</history>
+                    <units>%</units>
+                    <applications>
+                        <application>
+                            <name>Printer</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last(#1)}&lt;10</expression>
+                            <name>Уровень тонера пурпурного картриджа меньше 10% на {HOST.NAME}</name>
+                            <priority>WARNING</priority>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Модель желтого картриджа</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>iso.3.6.1.2.1.43.11.1.1.6.1.4</snmp_oid>
+                    <key>Yellow_Cartridge</key>
+                    <delay>1m</delay>
+                    <history>365d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>Printer</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Уровень тонера желтого картриджа</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>iso.3.6.1.2.1.43.11.1.1.9.1.4</snmp_oid>
+                    <key>Yellow_Cartridge_Level</key>
+                    <delay>1m</delay>
+                    <history>30d</history>
+                    <units>%</units>
+                    <applications>
+                        <application>
+                            <name>Printer</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last(#1)}&lt;10</expression>
+                            <name>Уровень тонера желтого картриджа меньше 10% на {HOST.NAME}</name>
+                            <priority>WARNING</priority>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+            </items>
+            <macros>
+                <macro>
+                    <macro>{$SNMP_COMMUNITY}</macro>
+                    <value>public</value>
+                </macro>
+            </macros>
+        </template>
+    </templates>
+    <graphs>
+        <graph>
+            <name>Всего напечатано страниц</name>
+            <graph_items>
+                <graph_item>
+                    <color>1A7C11</color>
+                    <item>
+                        <host>Printer HP</host>
+                        <key>mib-2.43.10.2.1.4.1.1</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+        <graph>
+            <name>Уровень тонера</name>
+            <graph_items>
+                <graph_item>
+                    <color>1A7C11</color>
+                    <item>
+                        <host>Printer HP</host>
+                        <key>mib-2.43.11.1.1.9.1.1</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+    </graphs>
+</zabbix_export>
